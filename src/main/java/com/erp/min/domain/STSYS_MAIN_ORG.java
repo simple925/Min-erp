@@ -13,7 +13,8 @@ import javax.persistence.*;
 public class STSYS_MAIN_ORG {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ORG_ID;
+    @Column(name = "ORG_ID")
+    private Long id;
 
     @Column(length = 10, nullable = false)
     private String ORG_KEY;
@@ -55,8 +56,8 @@ public class STSYS_MAIN_ORG {
     private String ORG_UPT;
 
     @Builder
-    public STSYS_MAIN_ORG(Long ORG_ID, String ORG_KEY, String ORG_NM, String ORG_NO, String ORG_EN, String ORG_GB, String ORG_TEL, String ORG_FAX, String ORG_ADR_NO, String ORG_ADR, String ORG_ADR_D, String CEO_NM, String CEO_EM, String CEO_JUMIN, String OPEN_DT, String REG_DT, String ORG_UPJ, String ORG_UPT) {
-        this.ORG_ID = ORG_ID;
+    public STSYS_MAIN_ORG(Long id, String ORG_KEY, String ORG_NM, String ORG_NO, String ORG_EN, String ORG_GB, String ORG_TEL, String ORG_FAX, String ORG_ADR_NO, String ORG_ADR, String ORG_ADR_D, String CEO_NM, String CEO_EM, String CEO_JUMIN, String OPEN_DT, String REG_DT, String ORG_UPJ, String ORG_UPT) {
+        this.id = id;
         this.ORG_KEY = ORG_KEY;
         this.ORG_NM = ORG_NM;
         this.ORG_NO = ORG_NO;

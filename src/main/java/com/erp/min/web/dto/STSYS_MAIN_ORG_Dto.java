@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class STSYS_MAIN_ORG_Dto {
-    private Long ORG_ID;
+    private Long id;
     private String ORG_KEY;
     private String ORG_NM;
     private String ORG_NO;
@@ -27,8 +27,8 @@ public class STSYS_MAIN_ORG_Dto {
     private String REG_DT;
 
     @Builder
-    public STSYS_MAIN_ORG_Dto(Long ORG_ID, String ORG_KEY, String ORG_NM, String ORG_NO, String ORG_EN, String ORG_GB, String ORG_TEL, String ORG_FAX, String ORG_ADR_NO, String ORG_ADR, String ORG_ADR_D, String CEO_NM, String CEO_EM, String CEO_JUMIN, String OPEN_DT, String REG_DT) {
-        this.ORG_ID = ORG_ID;
+    public STSYS_MAIN_ORG_Dto(Long id, String ORG_KEY, String ORG_NM, String ORG_NO, String ORG_EN, String ORG_GB, String ORG_TEL, String ORG_FAX, String ORG_ADR_NO, String ORG_ADR, String ORG_ADR_D, String CEO_NM, String CEO_EM, String CEO_JUMIN, String OPEN_DT, String REG_DT) {
+        this.id = id;
         this.ORG_KEY = ORG_KEY;
         this.ORG_NM = ORG_NM;
         this.ORG_NO = ORG_NO;
@@ -48,7 +48,7 @@ public class STSYS_MAIN_ORG_Dto {
 
     public STSYS_MAIN_ORG toEntity() {
         return STSYS_MAIN_ORG.builder()
-                .ORG_ID(ORG_ID)
+                .id(id)
                 .ORG_KEY(ORG_KEY)
                 .ORG_NM(ORG_NM)
                 .ORG_NO(ORG_NO)
