@@ -39,4 +39,6 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
 
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client' // MariaDB
+    compile('org.springframework.boot:spring-boot-starter-mustache')
+
 }
