@@ -1,5 +1,6 @@
 package com.erp.min.domain;
 
+import com.erp.min.web.dto.STSYS_MAIN_ORG_UpdateRequestDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -75,5 +76,26 @@ public class STSYS_MAIN_ORG {
         this.REG_DT = REG_DT;
         this.ORG_UPJ = ORG_UPJ;
         this.ORG_UPT = ORG_UPT;
+    }
+
+    public void update(STSYS_MAIN_ORG_UpdateRequestDto requestDto){
+        this.id = requestDto.getId();
+        this.ORG_KEY = requestDto.getORG_KEY();
+        this.ORG_NM = requestDto.getORG_NM();
+        this.ORG_NO = requestDto.getORG_NO();
+        this.ORG_EN = requestDto.getORG_EN();
+        this.ORG_GB = requestDto.getORG_GB();
+        this.ORG_TEL = requestDto.getORG_TEL();
+        this.ORG_FAX = requestDto.getORG_FAX();
+        this.ORG_ADR_NO = requestDto.getORG_ADR_NO();
+        this.ORG_ADR = requestDto.getORG_ADR();
+        this.ORG_ADR_D = requestDto.getORG_ADR_D();
+        this.CEO_NM = requestDto.getCEO_NM();
+        this.CEO_EM = requestDto.getCEO_EM();
+        this.CEO_JUMIN = requestDto.getCEO_JUMIN();
+        this.OPEN_DT = requestDto.getOPEN_DT();
+        this.REG_DT = requestDto.getREG_DT();
+        this.ORG_UPJ = requestDto.getORG_ADR();
+        this.ORG_UPT = requestDto.getORG_ADR();
     }
 }
