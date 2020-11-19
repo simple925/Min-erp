@@ -2,6 +2,7 @@ package com.erp.min.web;
 
 import com.erp.min.service.stsys_main_orgService.STSYS_MAIN_ORG_Service;
 import com.erp.min.web.dto.stsys_main_orgDto.STSYS_MAIN_ORG_Dto;
+import com.erp.min.web.dto.stsys_main_orgDto.STSYS_MAIN_ORG_RequestDto;
 import com.erp.min.web.dto.stsys_main_orgDto.STSYS_MAIN_ORG_ResponseDto;
 import com.erp.min.web.dto.stsys_main_orgDto.STSYS_MAIN_ORG_UpdateRequestDto;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +14,7 @@ public class STSYS_MAIN_ORG_Controller {
     private final STSYS_MAIN_ORG_Service stsys_main_org_service;
 
     @PostMapping("/api/v1/main_save")
-    public Long save(@RequestBody STSYS_MAIN_ORG_Dto requestDto) {
+    public Long save(@RequestBody STSYS_MAIN_ORG_RequestDto requestDto) {
         return stsys_main_org_service.save(requestDto);
     }
 
