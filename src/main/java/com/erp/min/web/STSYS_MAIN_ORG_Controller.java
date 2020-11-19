@@ -27,4 +27,5 @@ public class STSYS_MAIN_ORG_Controller {
     public STSYS_MAIN_ORG_ResponseDto findById(@PathVariable Long id){
         return stsys_main_org_service.findById(id);
     }
+
 }
