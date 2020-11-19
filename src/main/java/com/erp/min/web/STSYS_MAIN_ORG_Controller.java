@@ -1,9 +1,9 @@
 package com.erp.min.web;
 
-import com.erp.min.service.STSYS_MAIN_ORG_Service;
-import com.erp.min.web.dto.STSYS_MAIN_ORG_Dto;
-import com.erp.min.web.dto.STSYS_MAIN_ORG_ResponseDto;
-import com.erp.min.web.dto.STSYS_MAIN_ORG_UpdateRequestDto;
+import com.erp.min.service.stsys_main_orgService.STSYS_MAIN_ORG_Service;
+import com.erp.min.web.dto.stsys_main_orgDto.STSYS_MAIN_ORG_Dto;
+import com.erp.min.web.dto.stsys_main_orgDto.STSYS_MAIN_ORG_ResponseDto;
+import com.erp.min.web.dto.stsys_main_orgDto.STSYS_MAIN_ORG_UpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

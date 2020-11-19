@@ -1,4 +1,4 @@
-package com.erp.min.domain;
+package com.erp.min.domain.stsys_main_orgDomain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

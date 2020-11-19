@@ -1,10 +1,9 @@
-package com.erp.min.domain;
+package com.erp.min.domain.stsys_main_orgDomain;
 
-import com.erp.min.web.dto.STSYS_MAIN_ORG_UpdateRequestDto;
+import com.erp.min.web.dto.stsys_main_orgDto.STSYS_MAIN_ORG_UpdateRequestDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 

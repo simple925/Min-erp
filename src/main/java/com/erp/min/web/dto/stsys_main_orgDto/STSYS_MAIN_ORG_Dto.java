@@ -1,6 +1,6 @@
-package com.erp.min.web.dto;
+package com.erp.min.web.dto.stsys_main_orgDto;
 
-import com.erp.min.domain.STSYS_MAIN_ORG;
+import com.erp.min.domain.stsys_main_orgDomain.STSYS_MAIN_ORG;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
