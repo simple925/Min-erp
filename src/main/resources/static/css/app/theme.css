@@ -1,15 +1,48 @@
 #wrapper-div{
-    width:80%;
+    width:90%;
+    margin: 0 auto;
 }
 #top-div{
-    background-color: #000000;
-    height:300px;
+    background-color: #0000ff;
+    height:50px;
+}
+#top-div-div{
+    padding: 10px 0 0 0;
 }
 #middle-div{
-    background-color: #110000;
-    height:400px;
+    background-color: #ff0000;
+    height:60px;
+}
+#middle-div-div{
+    padding: 15px 0 0 0;
 }
 #bottom-div{
-    background-color: #001100;
+    background-color: #00ff00;
     height: 800px;
+    margin: 8px 0 0 0;
+}
+hr{
+    margin: 8px 0;
+    background-color: black;
+}
+#button-group{
+    padding: 5px;
+    text-align: right;
+}
+#table_01{
+    background-color: white;
+    width: 49%;
+    float:left;
+    height: 400px;
+    margin: 0 0 0 5px;
+}
+#table_02{
+    background-color: white;
+        width: 49%;
+        float: right;
+        height: 400px;
+    margin: 0 5px 0 0px;
+}
+table, tr, td{
+    border: 1px solid black;
 }

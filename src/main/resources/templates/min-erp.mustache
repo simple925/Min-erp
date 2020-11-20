@@ -1,9 +1,75 @@
 {{>layout/header}}
 <div>
     <div id="wrapper-div">
-        <div id="top-div"></div>
-        <div id="middle-div"></div>
-        <div id="bottom-div"></div>
+        <div id="top-div">
+            <div id="top-div-div">
+                <label>코드등록</label>
+                <input type="button" id="search_button" name="search_button" value="검색">
+                <input type="button" id="insert_button" name="insert_button" value="추가">
+                <input type="button" id="delete_button" name="delete_button" value="삭제">
+                <input type="button" id="save_button" name="save_button" value="저장">
+            </div>
+        </div>
+        <hr>
+        <div id="middle-div">
+            <div id="middle-div-div">
+                <label>모듈명</label>
+                <input type="text" id="module-name" name="module-name">
+                <label>코드명</label>
+                <select id="code-name" name="code-name">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div id="bottom-div">
+            <div id="button-group">
+                <input type="button" id="insert_button" name="insert_button" value="추가">
+                <input type="button" id="delete_button" name="delete_button" value="삭제">
+                <input type="button" id="save_button" name="save_button" value="저장">
+            </div>
+            <div>
+                <div id="table_01">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>코드명</td>
+                            <td>코드CD</td>
+                            <td>사용유무</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="table_02">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td>세부코드cd</td>
+                            <td>세부코드명</td>
+                            <td>사용유무</td>
+                            <td>기타1</td>
+                            <td>기타2</td>
+                            <td>기타3</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {{>layout/footer}}
