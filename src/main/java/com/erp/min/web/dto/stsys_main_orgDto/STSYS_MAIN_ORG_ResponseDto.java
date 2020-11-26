@@ -6,38 +6,38 @@ import lombok.Getter;
 @Getter
 public class STSYS_MAIN_ORG_ResponseDto {
     private Long id;
-    private String ORG_KEY;
-    private String ORG_NM;
-    private String ORG_NO;
-    private String ORG_EN;
-    private String ORG_GB;
-    private String ORG_TEL;
-    private String ORG_FAX;
-    private String ORG_ADR_NO;
-    private String ORG_ADR;
-    private String ORG_ADR_D;
-    private String CEO_NM;
-    private String CEO_EM;
-    private String CEO_JUMIN;
-    private String OPEN_DT;
-    private String REG_DT;
+    private String org_key;
+    private String org_nm;
+    private String org_no;
+    private String org_en;
+    private String org_gb;
+    private String org_tel;
+    private String org_fax;
+    private String org_adr_no;
+    private String org_adr;
+    private String org_adr_d;
+    private String ceo_nm;
+    private String ceo_em;
+    private String ceo_jumin;
+    private String open_dt;
+    private String reg_dt;
 
     public STSYS_MAIN_ORG_ResponseDto(STSYS_MAIN_ORG entity) {
         this.id = entity.getId();
-        this.ORG_KEY = entity.getORG_KEY();
-        this.ORG_NM = entity.getCEO_NM();
-        this.ORG_NO = entity.getORG_NO();
-        this.ORG_EN = entity.getORG_EN();
-        this.ORG_GB = entity.getORG_GB();
-        this.ORG_TEL = entity.getORG_TEL();
-        this.ORG_FAX = entity.getORG_FAX();
-        this.ORG_ADR_NO = entity.getORG_ADR_NO();
-        this.ORG_ADR = entity.getORG_ADR();
-        this.ORG_ADR_D = entity.getORG_ADR_D();
-        this.CEO_NM = entity.getCEO_NM();
-        this.CEO_EM = entity.getCEO_EM();
-        this.CEO_JUMIN = entity.getCEO_JUMIN();
-        this.OPEN_DT = entity.getOPEN_DT();
-        this.REG_DT = entity.getREG_DT();
+        this.org_key = entity.getOrg_key();
+        this.org_nm = entity.getCeo_nm();
+        this.org_no = entity.getOrg_no();
+        this.org_en = entity.getOrg_en();
+        this.org_gb = entity.getOrg_gb();
+        this.org_tel = entity.getOrg_tel();
+        this.org_fax = entity.getOrg_fax();
+        this.org_adr_no = entity.getOrg_adr_no();
+        this.org_adr = entity.getOrg_adr();
+        this.org_adr_d = entity.getOrg_adr_d();
+        this.ceo_nm = entity.getCeo_nm();
+        this.ceo_em = entity.getCeo_em();
+        this.ceo_jumin = entity.getCeo_jumin();
+        this.open_dt = entity.getOpen_dt();
+        this.reg_dt = entity.getReg_dt();
     }
 }

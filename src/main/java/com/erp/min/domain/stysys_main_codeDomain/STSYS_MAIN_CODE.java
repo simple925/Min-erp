@@ -5,33 +5,32 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-
 @Getter
 @NoArgsConstructor
 @Entity
 public class STSYS_MAIN_CODE {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "CODE_ID", length = 10)
-    private Long id;
+    @Column(length = 10)
+    private String code_id;
+
     @Column(length = 20)
-    private String CODE_CD;
+    private String code_cd;
     @Column(length = 30)
-    private String CODE_NM;
+    private String code_nm;
     @Column(length = 1)
-    private String CODE_YN;
+    private String code_yn;
     @Column(length = 10)
-    private String MD_ID  ;
+    private String md_id;
     @Column(length = 10)
-    private String ORG_ID ;
+    private String org_id;
 
     @Builder
-    public STSYS_MAIN_CODE(Long id, String CODE_CD, String CODE_NM, String CODE_YN, String MD_ID, String ORG_ID) {
-        this.id = id;
-        this.CODE_CD = CODE_CD;
-        this.CODE_NM = CODE_NM;
-        this.CODE_YN = CODE_YN;
-        this.MD_ID = MD_ID;
-        this.ORG_ID = ORG_ID;
+    public STSYS_MAIN_CODE(String code_id, String code_cd, String code_nm, String code_yn, String md_id, String org_id) {
+        this.code_id = code_id;
+        this.code_cd = code_cd;
+        this.code_nm = code_nm;
+        this.code_yn = code_yn;
+        this.md_id = md_id;
+        this.org_id = org_id;
     }
 }

@@ -15,35 +15,35 @@ public class STSYS_MAIN_CODE_DTL {
     @Column(name = "CODE_DTL_ID", length = 10)
     private Long id;
     @Column(length = 10)
-    private String CODE_ID;
+    private String code_id;
     @Column(length = 20)
-    private String CODE_DTL_CD;
+    private String code_dtl_cd;
     @Column(length = 30)
-    private String CODE_DTL_NM;
+    private String code_dtl_nm;
     @Column(length = 1)
-    private String CODE_DTL_YN;
+    private String code_dtl_yn;
     @Column(length = 30)
-    private String CODE_DTL_FLAG01;
+    private String code_dtl_flag01;
     @Column(length = 30)
-    private String CODE_DTL_FLAG02;
+    private String code_dtl_flag02;
     @Column(length = 30)
-    private String CODE_DTL_FLAG03;
+    private String code_dtl_flag03;
     @Column(length = 30)
-    private String CODE_DTL_FLAG04;
+    private String code_dtl_flag04;
     @Column(length = 30)
-    private String CODE_DTL_FLAG05;
+    private String code_dtl_flag05;
 
     @Builder
-    public STSYS_MAIN_CODE_DTL(Long id, String CODE_ID, String CODE_DTL_CD, String CODE_DTL_NM, String CODE_DTL_YN, String CODE_DTL_FLAG01, String CODE_DTL_FLAG02, String CODE_DTL_FLAG03, String CODE_DTL_FLAG04, String CODE_DTL_FLAG05) {
+    public STSYS_MAIN_CODE_DTL(Long id, String code_id, String code_dtl_cd, String code_dtl_nm, String code_dtl_yn, String code_dtl_flag01, String code_dtl_flag02, String code_dtl_flag03, String code_dtl_flag04, String code_dtl_flag05) {
         this.id = id;
-        this.CODE_ID = CODE_ID;
-        this.CODE_DTL_CD = CODE_DTL_CD;
-        this.CODE_DTL_NM = CODE_DTL_NM;
-        this.CODE_DTL_YN = CODE_DTL_YN;
-        this.CODE_DTL_FLAG01 = CODE_DTL_FLAG01;
-        this.CODE_DTL_FLAG02 = CODE_DTL_FLAG02;
-        this.CODE_DTL_FLAG03 = CODE_DTL_FLAG03;
-        this.CODE_DTL_FLAG04 = CODE_DTL_FLAG04;
-        this.CODE_DTL_FLAG05 = CODE_DTL_FLAG05;
+        this.code_id = code_id;
+        this.code_dtl_cd = code_dtl_cd;
+        this.code_dtl_nm = code_dtl_nm;
+        this.code_dtl_yn = code_dtl_yn;
+        this.code_dtl_flag01 = code_dtl_flag01;
+        this.code_dtl_flag02 = code_dtl_flag02;
+        this.code_dtl_flag03 = code_dtl_flag03;
+        this.code_dtl_flag04 = code_dtl_flag04;
+        this.code_dtl_flag05 = code_dtl_flag05;
     }
 }

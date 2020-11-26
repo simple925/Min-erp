@@ -16,7 +16,7 @@ public class MainController {
     }
     @GetMapping("/getAll")
     public String getAll(){
-        return stsys_main_org_service.getSTSYS().get(0).getORG_NM();
+        return stsys_main_org_service.getSTSYS().get(0).getOrg_nm();
     }
 
 }

@@ -13,88 +13,88 @@ import javax.persistence.*;
 public class STSYS_MAIN_ORG {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ORG_ID")
+    @Column(name = "org_id")
     private Long id;
 
     @Column(length = 10, nullable = false)
-    private String ORG_KEY;
+    private String org_key;
 
     @Column(length = 50, nullable = false)
-    private String ORG_NM;
+    private String org_nm;
 
     @Column(length = 12)
-    private String ORG_NO;
+    private String org_no;
 
     @Column(length = 50)
-    private String ORG_EN;
+    private String org_en;
 
     @Column(length = 1)
-    private String ORG_GB;
+    private String org_gb;
     @Column(length = 15)
-    private String ORG_TEL;
+    private String org_tel;
     @Column(length = 15)
-    private String ORG_FAX;
+    private String org_fax;
     @Column(length = 5)
-    private String ORG_ADR_NO;
+    private String org_adr_no;
     @Column(length = 40)
-    private String ORG_ADR;
+    private String org_adr;
     @Column(length = 40)
-    private String ORG_ADR_D;
+    private String org_adr_d;
     @Column(length = 20)
-    private String CEO_NM;
+    private String ceo_nm;
     @Column(length = 20)
-    private String CEO_EM;
+    private String ceo_em;
     @Column(length = 12)
-    private String CEO_JUMIN;
+    private String ceo_jumin;
     @Column(columnDefinition = "DATE")
-    private String OPEN_DT;
+    private String open_dt;
     @Column(columnDefinition = "DATE")
-    private String REG_DT;
+    private String reg_dt;
     @Column(length = 10)
-    private String ORG_UPJ;
+    private String org_upj;
     @Column(length = 10)
-    private String ORG_UPT;
+    private String org_upt;
 
     @Builder
-    public STSYS_MAIN_ORG(Long id, String ORG_KEY, String ORG_NM, String ORG_NO, String ORG_EN, String ORG_GB, String ORG_TEL, String ORG_FAX, String ORG_ADR_NO, String ORG_ADR, String ORG_ADR_D, String CEO_NM, String CEO_EM, String CEO_JUMIN, String OPEN_DT, String REG_DT, String ORG_UPJ, String ORG_UPT) {
+    public STSYS_MAIN_ORG(Long id, String org_key, String org_nm, String org_no, String org_en, String org_gb, String org_tel, String org_fax, String org_adr_no, String org_adr, String org_adr_d, String ceo_nm, String ceo_em, String ceo_jumin, String open_dt, String reg_dt, String org_upj, String org_upt) {
         this.id = id;
-        this.ORG_KEY = ORG_KEY;
-        this.ORG_NM = ORG_NM;
-        this.ORG_NO = ORG_NO;
-        this.ORG_EN = ORG_EN;
-        this.ORG_GB = ORG_GB;
-        this.ORG_TEL = ORG_TEL;
-        this.ORG_FAX = ORG_FAX;
-        this.ORG_ADR_NO = ORG_ADR_NO;
-        this.ORG_ADR = ORG_ADR;
-        this.ORG_ADR_D = ORG_ADR_D;
-        this.CEO_NM = CEO_NM;
-        this.CEO_EM = CEO_EM;
-        this.CEO_JUMIN = CEO_JUMIN;
-        this.OPEN_DT = OPEN_DT;
-        this.REG_DT = REG_DT;
-        this.ORG_UPJ = ORG_UPJ;
-        this.ORG_UPT = ORG_UPT;
+        this.org_key = org_key;
+        this.org_nm = org_nm;
+        this.org_no = org_no;
+        this.org_en = org_en;
+        this.org_gb = org_gb;
+        this.org_tel = org_tel;
+        this.org_fax = org_fax;
+        this.org_adr_no = org_adr_no;
+        this.org_adr = org_adr;
+        this.org_adr_d = org_adr_d;
+        this.ceo_nm = ceo_nm;
+        this.ceo_em = ceo_em;
+        this.ceo_jumin = ceo_jumin;
+        this.open_dt = open_dt;
+        this.reg_dt = reg_dt;
+        this.org_upj = org_upj;
+        this.org_upt = org_upt;
     }
 
     public void update(STSYS_MAIN_ORG_UpdateRequestDto requestDto){
         this.id = requestDto.getId();
-        this.ORG_KEY = requestDto.getORG_KEY();
-        this.ORG_NM = requestDto.getORG_NM();
-        this.ORG_NO = requestDto.getORG_NO();
-        this.ORG_EN = requestDto.getORG_EN();
-        this.ORG_GB = requestDto.getORG_GB();
-        this.ORG_TEL = requestDto.getORG_TEL();
-        this.ORG_FAX = requestDto.getORG_FAX();
-        this.ORG_ADR_NO = requestDto.getORG_ADR_NO();
-        this.ORG_ADR = requestDto.getORG_ADR();
-        this.ORG_ADR_D = requestDto.getORG_ADR_D();
-        this.CEO_NM = requestDto.getCEO_NM();
-        this.CEO_EM = requestDto.getCEO_EM();
-        this.CEO_JUMIN = requestDto.getCEO_JUMIN();
-        this.OPEN_DT = requestDto.getOPEN_DT();
-        this.REG_DT = requestDto.getREG_DT();
-        this.ORG_UPJ = requestDto.getORG_ADR();
-        this.ORG_UPT = requestDto.getORG_ADR();
+        this.org_key = requestDto.getOrg_key();
+        this.org_nm = requestDto.getOrg_nm();
+        this.org_no = requestDto.getOrg_no();
+        this.org_en = requestDto.getOrg_en();
+        this.org_gb = requestDto.getOrg_gb();
+        this.org_tel = requestDto.getOrg_tel();
+        this.org_fax = requestDto.getOrg_fax();
+        this.org_adr_no = requestDto.getOrg_adr_no();
+        this.org_adr = requestDto.getOrg_adr();
+        this.org_adr_d = requestDto.getOrg_adr_d();
+        this.ceo_nm = requestDto.getCeo_nm();
+        this.ceo_em = requestDto.getCeo_em();
+        this.ceo_jumin = requestDto.getCeo_jumin();
+        this.open_dt = requestDto.getOpen_dt();
+        this.reg_dt = requestDto.getReg_dt();
+        this.org_upj = requestDto.getOrg_adr();
+        this.org_upt = requestDto.getOrg_adr();
     }
 }
