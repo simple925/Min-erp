@@ -10,8 +10,9 @@ import javax.persistence.*;
 @Entity
 public class STSYS_MAIN_CODE {
     @Id
-    @Column(length = 10)
-    private String code_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "CODE_ID", unique = true, columnDefinition = "VARCHAR(10)")
+    private Long code_id;
 
     @Column(length = 20)
     private String code_cd;
@@ -25,7 +26,7 @@ public class STSYS_MAIN_CODE {
     private String org_id;
 
     @Builder
-    public STSYS_MAIN_CODE(String code_id, String code_cd, String code_nm, String code_yn, String md_id, String org_id) {
+    public STSYS_MAIN_CODE(Long code_id, String code_cd, String code_nm, String code_yn, String md_id, String org_id) {
         this.code_id = code_id;
         this.code_cd = code_cd;
         this.code_nm = code_nm;

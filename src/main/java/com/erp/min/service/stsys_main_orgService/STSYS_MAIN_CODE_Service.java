@@ -12,7 +12,7 @@ public class STSYS_MAIN_CODE_Service {
     private final STSYS_MAIN_CODE_Repository stsys_main_code_repository;
 
     @Transactional
-    public String save(STSYS_MAIN_CODE_RequestDto requestDto){
+    public Long save(STSYS_MAIN_CODE_RequestDto requestDto){
         return stsys_main_code_repository.save(requestDto.toEntity()).getCode_id();
     }
 }

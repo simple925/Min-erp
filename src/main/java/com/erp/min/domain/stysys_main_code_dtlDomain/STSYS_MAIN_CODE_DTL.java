@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class STSYS_MAIN_CODE_DTL {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "CODE_DTL_ID", length = 10)
+    @Column(name = "code_dtl_id", length = 10)
     private Long id;
     @Column(length = 10)
     private String code_id;

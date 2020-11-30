@@ -15,7 +15,7 @@ public class Test_API_Controller {
     private final STSYS_MAIN_CODE_Service stsys_main_code_service;
 
     @PostMapping("/api/code/save")
-    public String save(@RequestBody STSYS_MAIN_CODE_RequestDto requestDto){
+    public Long save(@RequestBody STSYS_MAIN_CODE_RequestDto requestDto){
         return stsys_main_code_service.save(requestDto);
     }
 }

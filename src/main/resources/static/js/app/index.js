@@ -20,7 +20,7 @@ var main = {
 //            data: data
         }).done(function (){
             alert('코드가 등록 되었습니다.');
-            window.location.href = '/min-erp';
+//            window.location.href = '/min-erp';
         }).fail(function (error){
             alert(JSON.stringify(error));
             console.log(typeof(JSON.stringify(error)))
