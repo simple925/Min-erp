@@ -1,13 +1,15 @@
 package com.erp.min.web.dto.stsys_main_orgDto;
 
-import com.erp.min.domain.stsys_main_orgDomain.STSYS_MAIN_ORG;
+import com.erp.min.domain.stsys_main_orgDomain.Stsys_main_org;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+
 @Getter
 @NoArgsConstructor
-public class STSYS_MAIN_ORG_RequestDto {
+public class Stsys_main_org_Dto {
+    private Long id;
     private String org_key;
     private String org_nm;
     private String org_no;
@@ -23,26 +25,25 @@ public class STSYS_MAIN_ORG_RequestDto {
     private String ceo_jumin;
     private String open_dt;
     private String reg_dt;
-    private String org_upj;
-    private String org_upt;
+
     @Builder
-    public STSYS_MAIN_ORG_RequestDto(String org_key,
-                                     String org_nm,
-                                     String org_no,
-                                     String org_en,
-                                     String org_gb,
-                                     String org_tel,
-                                     String org_fax,
-                                     String org_adr_no,
-                                     String org_adr,
-                                     String org_adr_d,
-                                     String ceo_nm,
-                                     String ceo_em,
-                                     String ceo_jumin,
-                                     String open_dt,
-                                     String reg_dt,
-                                     String org_upj,
-                                     String org_upt) {
+    public Stsys_main_org_Dto(Long id,
+                              String org_key,
+                              String org_nm,
+                              String org_no,
+                              String org_en,
+                              String org_gb,
+                              String org_tel,
+                              String org_fax,
+                              String org_adr_no,
+                              String org_adr,
+                              String org_adr_d,
+                              String ceo_nm,
+                              String ceo_em,
+                              String ceo_jumin,
+                              String open_dt,
+                              String reg_dt) {
+        this.id = id;
         this.org_key = org_key;
         this.org_nm = org_nm;
         this.org_no = org_no;
@@ -58,13 +59,11 @@ public class STSYS_MAIN_ORG_RequestDto {
         this.ceo_jumin = ceo_jumin;
         this.open_dt = open_dt;
         this.reg_dt = reg_dt;
-        this.org_upj = org_upj;
-        this.org_upt = org_upt;
     }
 
-
-    public STSYS_MAIN_ORG toEntity(){
-        return STSYS_MAIN_ORG.builder()
+    public Stsys_main_org toEntity() {
+        return Stsys_main_org.builder()
+                .id(id)
                 .org_key(org_key)
                 .org_nm(org_nm)
                 .org_no(org_no)
@@ -80,8 +79,6 @@ public class STSYS_MAIN_ORG_RequestDto {
                 .ceo_jumin(ceo_jumin)
                 .open_dt(open_dt)
                 .reg_dt(reg_dt)
-                .org_upj(org_upj)
-                .org_upt(org_upt)
                 .build();
     }
 }

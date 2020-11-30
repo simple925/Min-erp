@@ -1,6 +1,6 @@
 package com.erp.min.domain.stsys_main_orgDomain;
 
-import com.erp.min.web.dto.stsys_main_orgDto.STSYS_MAIN_ORG_UpdateRequestDto;
+import com.erp.min.web.dto.stsys_main_orgDto.Stsys_main_org_UpdateRequestDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class STSYS_MAIN_ORG {
+public class Stsys_main_org {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "org_id")
@@ -56,7 +56,7 @@ public class STSYS_MAIN_ORG {
     private String org_upt;
 
     @Builder
-    public STSYS_MAIN_ORG(Long id, String org_key, String org_nm, String org_no, String org_en, String org_gb, String org_tel, String org_fax, String org_adr_no, String org_adr, String org_adr_d, String ceo_nm, String ceo_em, String ceo_jumin, String open_dt, String reg_dt, String org_upj, String org_upt) {
+    public Stsys_main_org(Long id, String org_key, String org_nm, String org_no, String org_en, String org_gb, String org_tel, String org_fax, String org_adr_no, String org_adr, String org_adr_d, String ceo_nm, String ceo_em, String ceo_jumin, String open_dt, String reg_dt, String org_upj, String org_upt) {
         this.id = id;
         this.org_key = org_key;
         this.org_nm = org_nm;
@@ -77,7 +77,7 @@ public class STSYS_MAIN_ORG {
         this.org_upt = org_upt;
     }
 
-    public void update(STSYS_MAIN_ORG_UpdateRequestDto requestDto){
+    public void update(Stsys_main_org_UpdateRequestDto requestDto){
         this.id = requestDto.getId();
         this.org_key = requestDto.getOrg_key();
         this.org_nm = requestDto.getOrg_nm();

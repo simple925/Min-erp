@@ -1,10 +1,10 @@
 package com.erp.min.web.dto.stsys_main_orgDto;
 
-import com.erp.min.domain.stsys_main_orgDomain.STSYS_MAIN_ORG;
+import com.erp.min.domain.stsys_main_orgDomain.Stsys_main_org;
 import lombok.Getter;
 
 @Getter
-public class STSYS_MAIN_ORG_ResponseDto {
+public class Stsys_main_org_ResponseDto {
     private Long id;
     private String org_key;
     private String org_nm;
@@ -22,7 +22,7 @@ public class STSYS_MAIN_ORG_ResponseDto {
     private String open_dt;
     private String reg_dt;
 
-    public STSYS_MAIN_ORG_ResponseDto(STSYS_MAIN_ORG entity) {
+    public Stsys_main_org_ResponseDto(Stsys_main_org entity) {
         this.id = entity.getId();
         this.org_key = entity.getOrg_key();
         this.org_nm = entity.getCeo_nm();

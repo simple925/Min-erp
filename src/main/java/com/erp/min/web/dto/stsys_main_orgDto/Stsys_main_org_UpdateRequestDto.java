@@ -5,7 +5,7 @@ import lombok.Getter;
 
 
 @Getter
-public class STSYS_MAIN_ORG_UpdateRequestDto {
+public class Stsys_main_org_UpdateRequestDto {
     private Long id;
     private String org_key;
     private String org_nm;
@@ -26,7 +26,7 @@ public class STSYS_MAIN_ORG_UpdateRequestDto {
     private String org_upt;
 
     @Builder
-    public STSYS_MAIN_ORG_UpdateRequestDto(Long id, String org_key, String org_nm, String org_no, String org_en, String org_gb, String org_tel, String org_fax, String org_adr_no, String org_adr, String org_adr_d, String ceo_nm, String ceo_em, String ceo_jumin, String open_dt, String reg_dt, String org_upj, String org_upt) {
+    public Stsys_main_org_UpdateRequestDto(Long id, String org_key, String org_nm, String org_no, String org_en, String org_gb, String org_tel, String org_fax, String org_adr_no, String org_adr, String org_adr_d, String ceo_nm, String ceo_em, String ceo_jumin, String open_dt, String reg_dt, String org_upj, String org_upt) {
         this.id = id;
         this.org_key = org_key;
         this.org_nm = org_nm;

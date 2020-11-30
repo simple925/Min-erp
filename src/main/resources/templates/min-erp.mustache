@@ -38,12 +38,14 @@
                             <td>코드CD</td>
                             <td>사용유무</td>
                         </tr>
+                        {{#stsys_main_code}}
                         <tr>
-                            <td><input type="checkbox" id="code-check" name="code-check"></td>
-                            <td><input type="text" id="code-nm" name="code-nm"></td>
-                            <td><input type="text" id="code-cd" name="code-cd"></td>
-                            <td><input type="text" id="code-yn" name="code-yn"></td>
+                            <td><input type="checkbox" id="check_code" name="check_code" value="{{code_id}}"></td>
+                            <td><input type="text" id="code-nm" name="code-nm" value="{{code_nm}}"></td>
+                            <td><input type="text" id="code-cd" name="code-cd" value="{{code_cd}}"></td>
+                            <td><input type="text" id="code-yn" name="code-yn" value="{{code_yn}}"></td>
                         </tr>
+                        {{/stsys_main_code}}
                     </table>
                 </div>
                 <div id="table_02">

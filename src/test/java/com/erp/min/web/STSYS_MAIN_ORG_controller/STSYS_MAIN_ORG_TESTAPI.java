@@ -1,9 +1,9 @@
 package com.erp.min.web.STSYS_MAIN_ORG_controller;
 
-import com.erp.min.domain.stsys_main_orgDomain.STSYS_MAIN_ORG;
-import com.erp.min.domain.stsys_main_orgDomain.STSYS_MAIN_ORG_Repository;
-import com.erp.min.web.dto.stsys_main_orgDto.STSYS_MAIN_ORG_RequestDto;
-import com.erp.min.web.dto.stsys_main_orgDto.STSYS_MAIN_ORG_UpdateRequestDto;
+import com.erp.min.domain.stsys_main_orgDomain.Stsys_main_org;
+import com.erp.min.domain.stsys_main_orgDomain.Stsys_main_org_Repository;
+import com.erp.min.web.dto.stsys_main_orgDto.Stsys_main_org_RequestDto;
+import com.erp.min.web.dto.stsys_main_orgDto.Stsys_main_org_UpdateRequestDto;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class STSYS_MAIN_ORG_TESTAPI {
     private TestRestTemplate restTemplate;
 
     @Autowired
-    private STSYS_MAIN_ORG_Repository stsys_main_org_repository;
+    private Stsys_main_org_Repository stsys_main_org_repository;
 
 //    @After
 //    public void tearDown() throws Exception {
@@ -42,7 +42,7 @@ public class STSYS_MAIN_ORG_TESTAPI {
         for(int i=0;i<17;i++){
             testDataList.add("testData"+i);
         }
-        STSYS_MAIN_ORG_RequestDto requestDto = STSYS_MAIN_ORG_RequestDto.builder()
+        Stsys_main_org_RequestDto requestDto = Stsys_main_org_RequestDto.builder()
                 .org_key(testDataList.get(0))
                 .org_nm(testDataList.get(1))
                 .ceo_em(testDataList.get(2))
@@ -67,7 +67,7 @@ public class STSYS_MAIN_ORG_TESTAPI {
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(responseEntity.getBody()).isGreaterThan(0L);
 
-        List<STSYS_MAIN_ORG> all = stsys_main_org_repository.findAll();
+        List<Stsys_main_org> all = stsys_main_org_repository.findAll();
         assertThat(all.get(0).getOrg_key()   ).isEqualTo(testDataList.get(0));
         assertThat(all.get(0).getOrg_nm()    ).isEqualTo(testDataList.get(1));
         assertThat(all.get(0).getCeo_em()    ).isEqualTo(testDataList.get(2));
@@ -88,7 +88,7 @@ public class STSYS_MAIN_ORG_TESTAPI {
     }
     @Test
     public void sts_수정된다() throws Exception {
-        STSYS_MAIN_ORG saved = stsys_main_org_repository.save(STSYS_MAIN_ORG.builder()
+        Stsys_main_org saved = stsys_main_org_repository.save(Stsys_main_org.builder()
                 .org_key("key")
                 .org_nm("nm")
                 .ceo_em("ceoen")
@@ -113,7 +113,7 @@ public class STSYS_MAIN_ORG_TESTAPI {
         for(int i=0;i<17;i++){
             testDataList.add("testData"+i);
         }
-        STSYS_MAIN_ORG_UpdateRequestDto requestDto = STSYS_MAIN_ORG_UpdateRequestDto.builder()
+        Stsys_main_org_UpdateRequestDto requestDto = Stsys_main_org_UpdateRequestDto.builder()
                 .org_key(testDataList.get(0))
                 .org_nm(testDataList.get(1))
                 .ceo_em(testDataList.get(2))

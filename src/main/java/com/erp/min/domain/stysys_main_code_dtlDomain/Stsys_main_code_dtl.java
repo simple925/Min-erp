@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class STSYS_MAIN_CODE_DTL {
+public class Stsys_main_code_dtl {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "code_dtl_id", length = 10)
@@ -34,7 +34,7 @@ public class STSYS_MAIN_CODE_DTL {
     private String code_dtl_flag05;
 
     @Builder
-    public STSYS_MAIN_CODE_DTL(Long id, String code_id, String code_dtl_cd, String code_dtl_nm, String code_dtl_yn, String code_dtl_flag01, String code_dtl_flag02, String code_dtl_flag03, String code_dtl_flag04, String code_dtl_flag05) {
+    public Stsys_main_code_dtl(Long id, String code_id, String code_dtl_cd, String code_dtl_nm, String code_dtl_yn, String code_dtl_flag01, String code_dtl_flag02, String code_dtl_flag03, String code_dtl_flag04, String code_dtl_flag05) {
         this.id = id;
         this.code_id = code_id;
         this.code_dtl_cd = code_dtl_cd;

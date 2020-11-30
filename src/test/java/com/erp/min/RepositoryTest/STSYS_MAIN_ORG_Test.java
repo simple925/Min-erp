@@ -1,7 +1,7 @@
 package com.erp.min.RepositoryTest;
 
-import com.erp.min.domain.stsys_main_orgDomain.STSYS_MAIN_ORG;
-import com.erp.min.domain.stsys_main_orgDomain.STSYS_MAIN_ORG_Repository;
+import com.erp.min.domain.stsys_main_orgDomain.Stsys_main_org;
+import com.erp.min.domain.stsys_main_orgDomain.Stsys_main_org_Repository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class STSYS_MAIN_ORG_Test {
 
     @Autowired
-    STSYS_MAIN_ORG_Repository stsys_main_org_repository;
+    Stsys_main_org_Repository stsys_main_org_repository;
 
 //    @After
 //    public void cleanup() {
@@ -26,14 +26,14 @@ public class STSYS_MAIN_ORG_Test {
 
     @Test
     public void 메인테이플_확인(){
-        stsys_main_org_repository.save(STSYS_MAIN_ORG.builder()
+        stsys_main_org_repository.save(Stsys_main_org.builder()
                 .org_nm("정윤도")
                 .org_key("JD001")
                 .build()
         );
-        List<STSYS_MAIN_ORG> stsys_main_orgList = stsys_main_org_repository.findAll();
+        List<Stsys_main_org> stsys_main_orgList = stsys_main_org_repository.findAll();
 
-        STSYS_MAIN_ORG stsys_main_org = stsys_main_orgList.get(0);
+        Stsys_main_org stsys_main_org = stsys_main_orgList.get(0);
         assertThat(stsys_main_org.getOrg_nm()).isEqualTo("정윤도");
         assertThat(stsys_main_org.getOrg_key()).isEqualTo("JD001");
     }
