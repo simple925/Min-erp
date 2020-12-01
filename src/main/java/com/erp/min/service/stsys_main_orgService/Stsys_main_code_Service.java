@@ -47,4 +47,5 @@ public class Stsys_main_code_Service {
     public void deleteAll(List<Long> id_list){
         stsys_main_code_repository.deleteAll(id_list);
     }
+
 }

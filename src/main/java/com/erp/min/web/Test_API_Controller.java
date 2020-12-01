@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RequiredArgsConstructor
 @RestController
@@ -15,8 +16,18 @@ public class Test_API_Controller {
     private final Stsys_main_code_Service stsys_main_code_service;
 
     @PostMapping("/api/code/save")
-    public Long save(@RequestBody Stsys_main_code_SaveRequestDto requestDto){
-        return stsys_main_code_service.save(requestDto);
+//    public Long save(@RequestBody Stsys_main_code_SaveRequestDto requestDto){
+    public void save(@RequestBody List<Stsys_main_code_SaveRequestDto> values){
+        for (Stsys_main_code_SaveRequestDto dto:values) {
+            if (dto.getCheck_code() == ""){
+                // insert
+                stsys_main_code_service.save(dto);
+            } else {
+                // update
+                stsys_main_code_service.update(Long.parseLong(dto.getCheck_code()),Stsys_main_code_SaveRequestDto.save_to_update_dto(dto));
+            }
+        }
+//        return stsys_main_code_service.save(requestDto);
     }
 
     @PutMapping("/api/code/update/{id}")
@@ -30,10 +41,7 @@ public class Test_API_Controller {
     }
 
     @DeleteMapping("/api/code/delete")
-    public void deleteAll(@RequestParam List<Long> id_list){
-        for (Long l : id_list){
-            System.out.println(l);
-        }
+    public void deleteAll(@RequestParam(value = "id_list[]") List<Long> id_list){
         stsys_main_code_service.deleteAll(id_list);
     }
 }

@@ -1,12 +1,12 @@
 var main = {
     init : function () {
         var _this = this;
-        $("#btn-code-insert").on("click",function(){
+        $("#btn-code-save").on("click",function(){
             _this.save();
         });
 
-        $("#btn-code-update").on('click', function () {
-            _this.update();
+        $("#btn-code-add").on('click', function () {
+            _this.add();
         });
 
         $("#btn-code-delete").on('click', function () {
@@ -14,29 +14,41 @@ var main = {
         });
     },
     save : function () {
-        var data = {
-            code_cd: $("#code-cd").val(),
-            code_nm: $("#code-nm").val(),
-            code_yn: $("#code-yn").val()
-        };
+        var values = [];
+        var rowCount = $("#left_table tr").length;
+        var tr = '';
+        for(var i = 1;i<rowCount;i++){
+            tr = $("#left_table tr:eq('"+i+"')")
+            var tdMap = new Object();
+            tdMap.check_code = tr.find("td:eq('0') input").val();
+            tdMap.code_cd = tr.find("td:eq('1') input").val();
+            tdMap.code_nm = tr.find("td:eq('2') input").val();
+            tdMap.code_yn = tr.find("td:eq('3') input").val();
+            values.push(tdMap);
+        }
+        console.log(values);
         $.ajax({
             type: 'POST',
             url: '/api/code/save',
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
-            data: JSON.stringify(data)
+            data: JSON.stringify(values)
         }).done(function (){
             alert('코드가 등록 되었습니다.');
+            window.location.href = '/min-erp';
         }).fail(function (error){
             alert(JSON.stringify(error));
-            console.log(typeof(JSON.stringify(error)))
         });
     },
 
-    update : function () {
-        var data = {
-
-        }
+    add : function () {
+        var tr = "<tr>" +
+                 "<td><input type='checkbox' id='check_code' name='check_code' value=''></td>" +
+                 "<td><input type='text' id='code-nm' name='code-nm' value=''></td>" +
+                 "<td><input type='text' id='code-cd' name='code-cd' value=''></td>" +
+                 "<td><input type='text' id='code-yn' name='code-yn' value=''></td>" +
+                 "</tr>";
+        $("#left_table").append(tr);
     },
 
     delete : function () {
@@ -52,10 +64,9 @@ var main = {
         $.ajax({
             type: 'DELETE',
             url: '/api/code/delete',
-            dataType: 'json',
-            contentType: 'application/json; charset=utf-8',
-            data: {id_list:id_list}
+            data: {"id_list":id_list}
         }).done(function (){
+            window.location.href = '/min-erp';
             alert("삭제 되었습니다.");
         }).fail(function (error){
             alert(JSON.stringify(error));

@@ -23,4 +23,6 @@ public class Stsys_main_code_UpdateRequestDto {
         this.md_id = md_id;
         this.org_id = org_id;
     }
+
+
 }

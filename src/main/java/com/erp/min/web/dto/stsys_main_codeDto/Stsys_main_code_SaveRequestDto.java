@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class Stsys_main_code_SaveRequestDto {
+    private String check_code;
     private String code_cd;
     private String code_nm;
     private String code_yn;
@@ -30,6 +31,16 @@ public class Stsys_main_code_SaveRequestDto {
                 .code_yn(code_yn)
                 .md_id(md_id)
                 .org_id(org_id)
+                .build();
+    }
+
+    public static Stsys_main_code_UpdateRequestDto save_to_update_dto(Stsys_main_code_SaveRequestDto dto){
+        return Stsys_main_code_UpdateRequestDto.builder()
+                .code_cd(dto.code_cd)
+                .code_nm(dto.code_nm)
+                .code_yn(dto.code_yn)
+                .md_id(dto.md_id)
+                .org_id(dto.org_id)
                 .build();
     }
 }
