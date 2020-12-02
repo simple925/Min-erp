@@ -61,3 +61,6 @@ table input[type=checkbox]{
     width: 182px;
     height: 30px;
 }
+#bottom-div{
+    overflow: scroll;
+}
