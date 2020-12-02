@@ -19,7 +19,7 @@ apply plugin : 'io.spring.dependency-management'
 apply plugin: 'idea'
 apply plugin: 'war'
 war{
-    baseName = '[min-erp]'
+    baseName = '[min_erp]'
 }
 idea {
     module {

@@ -30,7 +30,6 @@ var main = {
         $.ajax({
             type: 'POST',
             url: '/api/code/save',
-            dataType: 'json',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(values)
         }).done(function (){
