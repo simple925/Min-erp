@@ -25,7 +25,7 @@
         </div>
         <div id="bottom-div">
             <div id="button-group">
-                <input type="button" id="btn-dtl-insert" name="btn-dtl-insert" value="추가">
+                <input type="button" id="btn-dtl-add" name="btn-dtl-add" value="추가">
                 <input type="button" id="btn-dtl-delete" name="btn-dtl-delete" value="삭제">
                 <input type="button" id="btn-dtl-save" name="btn-dtl-save" value="저장">
             </div>
@@ -49,7 +49,7 @@
                     </table>
                 </div>
                 <div id="table_02">
-                    <table>
+                    <table id="right_table">
                         <tr>
                             <td></td>
                             <td>세부코드cd</td>
@@ -59,15 +59,17 @@
                             <td>기타2</td>
                             <td>기타3</td>
                         </tr>
+                        {{#stsys_main_code_dtl}}
                         <tr>
-                            <td><input type="checkbox" id="code-dtl-check" name="code-dtl-check"></td>
-                            <td><input type="text" id="code-dtl-cd" name="code-dtl-cd"></td>
-                            <td><input type="text" id="code-dtl-nm" name="code-dtl-nm"></td>
-                            <td><input type="text" id="code-dtl-yn" name="code-dtl-yn"></td>
-                            <td><input type="text" id="code-dtl-gt01" name="code-dtl-gt01"></td>
-                            <td><input type="text" id="code-dtl-gt02" name="code-dtl-gt02"></td>
-                            <td><input type="text" id="code-dtl-gt03" name="code-dtl-gt03"></td>
+                            <td><input type="checkbox" id="code-dtl-check" name="code-dtl-check" value="{{code_dtl_id}}"></td>
+                            <td><input type="text" id="code-dtl-cd" name="code-dtl-cd" value="{{code_dtl_cd}}"></td>
+                            <td><input type="text" id="code-dtl-nm" name="code-dtl-nm" value="{{code_dtl_nm}}"></td>
+                            <td><input type="text" id="code-dtl-yn" name="code-dtl-yn" value="{{code_dtl_yn}}"></td>
+                            <td><input type="text" id="code-dtl-flag01" name="code-dtl-flag01" value="{{code_dtl_flag01}}"></td>
+                            <td><input type="text" id="code-dtl-flag02" name="code-dtl-flag02" value="{{code_dtl_flag02}}"} }></td>
+                            <td><input type="text" id="code-dtl-flag03" name="code-dtl-flag03" value="{{code_dtl_flag03}}"></td>
                         </tr>
+                        {{/stsys_main_code_dtl}}
                     </table>
                 </div>
             </div>

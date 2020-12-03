@@ -1,4 +1,4 @@
-package com.erp.min.service.stsys_main_orgService;
+package com.erp.min.service.stsys_main_codeService;
 
 import com.erp.min.domain.stysys_main_codeDomain.Stsys_main_code;
 import com.erp.min.domain.stysys_main_codeDomain.Stsys_main_code_Repository;
