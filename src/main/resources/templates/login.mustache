@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <style>
     * {
     margin: 0;
@@ -116,36 +116,21 @@ span {
             <input type="checkbox" class="checkbox"><span>비밀번호기억하기</span>
             <button class="submit">로그인</button>
         </form>
-        <form id="register" action="" class="input-group">
-            <input type="text" class="input-field" placeholder="이메일" required>
-            <input type="password" class="input-field" placeholder="비밀번호" required>
-            <input type="emp_no" class="input-field" placeholder="사원번호" required>
-            <input type="emp_mm" class="input-field" placeholder="이름" required>
-            <input type="emp_en" class="input-field" placeholder="영어이름" required>
-            <input type="emp_incom" class="input-field" placeholder="재직구분" required>
-            <input type="dept_cd" class="input-field" placeholder="부서코드" required>
-            <button class="submit">회원가입</button>
+        <form id="register" action="/join" method="post" class="input-group">
+
+            <input type="text" name="emp_id"class="input-field" placeholder="이메일" >
+            <input type="password" name="emp_pw"class="input-field" placeholder="비밀번호" >
+            <input name="emp_nm" class="input-field" placeholder="이름" >
+            <input name="emp_en" class="input-field" placeholder="영어이름" >
+            <input name="emp_incom" class="input-field" placeholder="재직구분" >
+            <input name="emp_gb" class="input-field" placeholder="사용자구분" >
+            <input name="dept_cd" class="input-field" placeholder="부서코드" >
+
+            <button type="submit">회원가입</button>
         </form>
     </div>
 </div>
-<script>
-            var x = document.getElementById("login");
-            var y = document.getElementById("register");
-            var z = document.getElementById("btn");
 
-
-            function login(){
-                x.style.left = "50px";
-                y.style.left = "450px";
-                z.style.left = "0";
-            }
-
-            function register(){
-                x.style.left = "-400px";
-                y.style.left = "50px";
-                z.style.left = "110px";
-            }
-        </script>
-
+<script src="/js/app/join.js"></script>
 </body>
 </html>
