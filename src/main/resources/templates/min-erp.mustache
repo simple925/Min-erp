@@ -17,9 +17,9 @@
                 <input type="text" id="module-name" name="module-name">
                 <label>코드명</label>
                 <select id="code-name-select" name="code-name-select">
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                    {{#stsys_main_code}}
+                    <option>{{code_nm}}</option>
+                    {{/stsys_main_code}}
                 </select>
             </div>
         </div>
